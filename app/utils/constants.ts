@@ -6,3 +6,7 @@ ingestion, algorithm optimization, ensuring adherence to evolving regulatory req
 user-friendly interfaces. I am deeply committed to continuous improvement, both in the code I write and the practices of the team
 around me, and to a culture of mentorship and knowledge sharing.
 `;
+
+export const footerText = `
+Built using Next.js. Hosted in my home server.
+`;
