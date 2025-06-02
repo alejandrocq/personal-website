@@ -17,9 +17,9 @@ export default function Home() {
             </h2>
 
             <div className="flex space-x-3 mt-5 mb-8 justify-center text-gray-300 text-2xl">
-                <a href="#" aria-label="LinkedIn" className="hover:text-blue-500 transition-colors"><FaLinkedin/></a>
-                <a href="#" aria-label="GitHub" className="hover:text-blue-500 transition-colors"><FaGithub/></a>
-                <a href="mailto:your.email@example.com" aria-label="E-mail" className="hover:text-blue-500 transition-colors"><FaEnvelope/></a>
+                <a href="#" aria-label="LinkedIn" className="hover:text-red-900 transition-colors"><FaLinkedin/></a>
+                <a href="#" aria-label="GitHub" className="hover:text-red-900 transition-colors"><FaGithub/></a>
+                <a href="mailto:your.email@example.com" aria-label="E-mail" className="hover:text-red-900 transition-colors"><FaEnvelope/></a>
             </div>
 
             <p className="text-lg text-gray-100 text-justify">
