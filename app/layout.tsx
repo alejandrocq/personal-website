@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavLink from "@/app/components/NavLink";
 import { Roboto } from 'next/font/google'
+import Footer from "@/app/components/Footer";
 
 const font = Roboto({
     subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </nav>
         </header>
         <main className="flex flex-col items-center">{children}</main>
+        <Footer/>
         </body>
         </html>
     );
