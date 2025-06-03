@@ -18,7 +18,15 @@ type Project = {
     description: string;
 }
 
-export const projects : Project[] = [
+type Experience = {
+    company: string;
+    role: string;
+    period: string;
+    description: string;
+    logoSrc?: string;
+}
+
+export const projects: Project[] = [
     {
         name: "ComedoresUGRbot",
         url: "https://github.com/alejandrocq/ComedoresUGRbot",
@@ -46,4 +54,30 @@ export const projects : Project[] = [
         This project was developed as part of my final degree project at UGR.
         `
     }
+];
+export const experiences: Experience[] = [
+    {
+        company: "Intendia",
+        role: "Software Developer",
+        period: "August 2016 - October 2019",
+        description: `
+            Developed and maintained a European tachograph compliance platform written in Java utilizing
+            Google Web Toolkit (GWT). This platform handled real-time and historical data, ultimately
+            presented to customers through location data, tachograph data, and driver infringement reports. 
+        `,
+        logoSrc: "/intendia_logo.png"
+    },
+    {
+        company: "GEOTAB",
+        role: "Senior Software Developer",
+        period: "October 2019 - Present",
+        description: `
+            Transitioned to Geotab following the acquisition of Intendia, where I’m responsible for
+            maintaining and enhancing a fleet management platform initially developed by Intendia. I now
+            collaborate on both the original Java/JEE/GWT platform and Geotab’s primary C#/TypeScript
+            platform, ensuring seamless integration. My focus includes real-time data ingestion and
+            development of critical features impacting customer experience and compliance.
+        `,
+        logoSrc: "/geotab_logo.jpg"
+    },
 ];

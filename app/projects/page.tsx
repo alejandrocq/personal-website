@@ -10,13 +10,13 @@ export default function ProjectsPage() {
                         key={project.url}
                         className={
                             `group bg-[#23272f] rounded-xl p-6 transition-transform duration-300 hover:-translate-y-2 
-                        hover:scale-105 hover:shadow-2xl border border-transparent hover:border-red-700 overflow-hidden flex flex-col 
+                        hover:scale-105 hover:shadow-2xl border border-transparent hover:border-yellow-400 overflow-hidden flex flex-col 
                         ${projects.length % 2 !== 0 /*odd*/ && idx === projects.length - 1 /*last*/ ? "col-span-full" : ""}
                         `}
                     >
                         <div className="flex items-center justify-between h-[50px]">
-                            <h2 className="text-2xl font-semibold group-hover:text-red-700 transition-colors duration-300">
-                                <a href={project.url} target="_blank" className="decoration-red-700 hover:decoration-2">
+                            <h2 className="text-2xl font-semibold group-hover:text-yellow-400 transition-colors duration-300">
+                                <a href={project.url} target="_blank" className="decoration-yellow-400 hover:decoration-2">
                                     {project.name}
                                 </a>
                             </h2>

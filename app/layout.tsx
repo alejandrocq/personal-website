@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav className="space-x-5 text-xl font-semibold">
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
-                <NavLink href="/contact">Contact</NavLink>
+                <NavLink href="/experience">Experience</NavLink>
             </nav>
         </header>
         <main className="flex flex-col items-center">{children}</main>
