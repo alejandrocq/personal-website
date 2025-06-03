@@ -24,7 +24,7 @@ export default function Home() {
                     <a href="mailto:contacto@alejandro-castilla.com" aria-label="E-mail" className="hover:text-red-900 transition-colors"><FaEnvelope/></a>
                 </div>
 
-                <p className="text-lg text-gray-100 text-justify">
+                <p className="text-lg text-gray-100 text-justify tracking-tight">
                     {aboutMe}
                 </p>
             </section>
