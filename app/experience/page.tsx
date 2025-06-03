@@ -1,3 +1,4 @@
+import {FaArrowDown} from "react-icons/fa";
 import Image from "next/image";
 import {experiences} from "@/app/utils/constants";
 
@@ -30,6 +31,11 @@ export default function ExperiencePage() {
                                 <p className="text-gray-300">{exp.description}</p>
                             </div>
                         </div>
+                        {idx < experiences.length - 1 && (
+                            <div className="flex flex-col items-center">
+                                <FaArrowDown size={30} className="text-yellow-400 m-6" />
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
