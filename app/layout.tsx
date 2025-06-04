@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en" className={font.className}>
         <body className="bg-dark text-gray-100 min-h-screen">
         <header className="w-full flex justify-center py-8">
-            <nav className="space-x-5 text-xl font-semibold">
+            <nav className="space-x-5 text-xl font-semibold overflow-auto flex align-middle p-2">
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/technologies">Technologies</NavLink>

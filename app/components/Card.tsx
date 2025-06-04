@@ -34,7 +34,7 @@ export default function Card(props: CardProps) {
             }
         >
             {props.tags && props.tags.length > 0 && (
-                <div className="mb-2 flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 pt-2 pb-2">
                     {props.tags.map(param => (
                         <span
                             key={param}
@@ -45,7 +45,7 @@ export default function Card(props: CardProps) {
                     ))}
                 </div>
             )}
-            <div className="flex items-center justify-between h-[50px]">
+            <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-semibold group-hover:text-yellow-400 transition-colors duration-300">
                     {props.titleUrl ? (
                         <a href={props.titleUrl} target="_blank">
@@ -73,10 +73,10 @@ export default function Card(props: CardProps) {
                 )}
             </div>
             {props.subtitle && (
-                <div className="text-sm text-gray-400 mb-1">{props.subtitle}</div>
+                <div className="text-sm text-gray-400 pt-1 pb-1">{props.subtitle}</div>
             )}
             {props.description && (
-                <p className="text-gray-300">{props.description}</p>
+                <p className="text-gray-300 pt-2 pb-2">{props.description}</p>
             )}
         </div>
     );
