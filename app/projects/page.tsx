@@ -9,7 +9,7 @@ export default function ProjectsPage() {
                     <Card
                         key={project.name}
                         title={project.name}
-                        titleUrl={project.url}
+                        url={project.url}
                         description={project.description}
                         logoSrc={project.logoSrc}
                         icon={project.icon}

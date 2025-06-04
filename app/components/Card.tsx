@@ -1,12 +1,13 @@
-import {IconType} from "react-icons";
+'use client';
+
 import Image from "next/image";
-import {Attributes} from "react";
+import {Attributes, ReactNode} from "react";
 
 interface CardProps extends Attributes {
     title: string;
-    titleUrl?: string;
+    url?: string;
     description?: string;
-    icon?: IconType;
+    icon?: ReactNode;
     logoSrc?: string;
     idx?: number;
     contentLength?: number;
@@ -16,7 +17,7 @@ interface CardProps extends Attributes {
 
 export default function Card(props: CardProps) {
     const colSpan = () => {
-        if (props.contentLength && props.idx) {
+        if (props.contentLength && typeof props.idx === "number") {
             return props.contentLength % 2 !== 0 && props.idx === props.contentLength - 1 ? "col-span-full" : "";
         }
 
@@ -25,11 +26,13 @@ export default function Card(props: CardProps) {
 
     return (
         <div
-            key={props.title}
+            onClick={() => {
+                if (props.url) window.open(props.url, "_blank");
+            }}
             className={
                 `group bg-[#23272f] rounded-xl p-6 transition-transform duration-300 hover:-translate-y-2 
                         hover:scale-105 hover:shadow-2xl border border-transparent hover:border-yellow-400 overflow-hidden flex flex-col 
-                        ${(colSpan())}
+                        ${(colSpan())} ${props.url ? "cursor-pointer" : ""}
                  `
             }
         >
@@ -47,17 +50,11 @@ export default function Card(props: CardProps) {
             )}
             <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-semibold group-hover:text-yellow-400 transition-colors duration-300">
-                    {props.titleUrl ? (
-                        <a href={props.titleUrl} target="_blank">
-                            {props.title}
-                        </a>
-                    ) : (
-                        props.title
-                    )}
+                    {props.title}
                 </h2>
                 {props.icon && (
                     <div className="flex-shrink-0 text-yellow-400/70">
-                        {<props.icon size="40px"/>}
+                        {props.icon}
                     </div>
                 )}
                 {props.logoSrc && (
