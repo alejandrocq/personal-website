@@ -42,3 +42,7 @@ next-env.d.ts
 
 # IntelliJ
 .idea/
+
+# SEO related
+public/*.xml
+public/robots.txt

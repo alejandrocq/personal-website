@@ -8,9 +8,17 @@ const font = Roboto({
     subsets: ['latin'],
 })
 
+const description = "Portfolio of Alejandro Castilla Quesada, showcasing my skills and projects.";
 export const metadata: Metadata = {
     title: "Alejandro Castilla Quesada - Portfolio",
-    description: "Portfolio of Alejandro Castilla Quesada, showcasing my skills and projects.",
+    description: description,
+    openGraph: {
+        title: "Alejandro Castilla Quesada | Portfolio",
+        description: description,
+        images: ["/profile.jpg"],
+        type: "website",
+        url: "https://alejandro-castilla.com",
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
