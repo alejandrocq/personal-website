@@ -1,5 +1,13 @@
 import {projects} from "@/app/utils/constants";
 import Card from "@/app/components/Card";
+import {Metadata} from "next";
+import { getMetadata } from "@/app/utils/utilities";
+
+export const metadata: Metadata = getMetadata({
+    title: "Projects - Alejandro Castilla Quesada",
+    description: "Explore the projects I've worked on, showcasing my skills in software development and problem-solving.",
+    path: "/projects",
+});
 
 export default function ProjectsPage() {
     return (

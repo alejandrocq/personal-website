@@ -1,6 +1,14 @@
 import {FaArrowDown} from "react-icons/fa";
 import {experiences} from "@/app/utils/constants";
 import Card from "@/app/components/Card";
+import {Metadata} from "next";
+import { getMetadata } from "@/app/utils/utilities"; // Add import
+
+export const metadata: Metadata = getMetadata({
+    title: "Experience - Alejandro Castilla Quesada",
+    description: "Professional experience and roles held by Alejandro Castilla Quesada.",
+    path: "/experience",
+});
 
 export default function ExperiencePage() {
     return (
