@@ -3,23 +3,17 @@ import "./globals.css";
 import NavLink from "@/app/components/NavLink";
 import { Roboto } from 'next/font/google'
 import Footer from "@/app/components/Footer";
+import { getMetadata } from "@/app/utils/utilities";
 
 const font = Roboto({
     subsets: ['latin'],
 })
 
-const description = "Portfolio of Alejandro Castilla Quesada, showcasing my skills and projects.";
-export const metadata: Metadata = {
+export const metadata: Metadata = getMetadata({
     title: "Alejandro Castilla Quesada - Portfolio",
-    description: description,
-    openGraph: {
-        title: "Alejandro Castilla Quesada | Portfolio",
-        description: description,
-        images: ["/profile.jpg"],
-        type: "website",
-        url: "https://alejandro-castilla.com",
-    },
-};
+    description: "Portfolio of Alejandro Castilla Quesada, showcasing my skills and projects.",
+    path: "",
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (

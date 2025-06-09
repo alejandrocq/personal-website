@@ -14,7 +14,7 @@ export function getMetadata({ title, description, path }: MetadataParams): Metad
         openGraph: {
             title,
             description,
-            images: ["/profile.jpg"],
+            images: {url: `${baseUrl}/profile.jpg`},
             type: "website",
             url: `${baseUrl}${path}`,
         },
